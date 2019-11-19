@@ -3,10 +3,12 @@
   "version": "11/18/2019",
   "scripts": {
     "build": "node build && prettier resume.html --write",
-    "test": "yarn run build && open resume.html"
+    "test": "yarn run build && open resume.html",
+    "pdf": "yarn run build && bash -i make_pdf.sh"
   },
   "devDependencies": {
     "jsdom": "^15.2.1",
     "prettier": "^1.19.1"
-  }
+  },
+  "license": "MIT"
 }
