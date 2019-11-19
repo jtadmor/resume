@@ -3,9 +3,9 @@
 Product- and people- oriented software developer. Seeking a team that strives for excellence while doing socially valuable work. My ideal organization would be agile, minimally hierarchical, open-minded, forward-looking, and remote-friendly.
 
 ### Contact
-* [![email](icons/Email_Icon.png) jtadmor@gmail.com](mailto:jtadmor@gmail.com)
+[<img src="icons/Email_Icon.png" alt="email" height="16px" width="16px"> jtadmor@gmail.com](mailto:jtadmor@gmail.com)
 
-* [![github](icons/GitHub-Mark-32px.png) jtadmor](https://github.com/jtadmor)
+[<img src="icons/GitHub-Mark-32px.png" alt="github" height="16px" width="16px"> jtadmor](https://github.com/jtadmor)
 
 
 ### Technologies used

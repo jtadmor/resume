@@ -4,7 +4,7 @@ _description
 
 ### Contact
 {#each contact-links}
-* [![_type](_icon) _content](_href)
+[<img src="_icon" alt="_type" height="16px" width="16px"> _content](_href)
 {/each contact-links}
 
 ### Technologies used
