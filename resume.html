@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -10,100 +11,123 @@
   </head>
   <body>
     <main>
-      <header class="header">
-        <div class="bio">
-          <h1 class="name">Yoel Tadmor</h1>
-          <hr />
-          <p class="description">
-            Product- and people- oriented software developer. Seeking a team
-            that strives for excellence while doing socially valuable work. My
-            ideal organization would be agile, minimally hierarchical,
-            open-minded, forward-looking, and remote-friendly.
-          </p>
-        </div>
+      <header>
+        <h1 class="name">Yoel Tadmor</h1>
+        <hr />
+        <p class="description">
+          Product- and people- oriented software developer. I excel at working
+          with stakeholders to create strategy and then driving implementation.
+          Seeking a team that strives for excellence while doing socially
+          valuable work. My ideal organization would be agile, minimally
+          hierarchical, open-minded, forward-looking, and remote-friendly.
+        </p>
       </header>
       <section>
         <h2>Work Experience</h2>
         <hr />
-        <div class="work-experience">
-          <div>
-            <span class="entry-title-container">
-              <h3 class="job-title">Full Stack Developer</h3>
-              <h4 class="org">
-                Wayfair
-              </h4>
-            </span>
-            <p class="dates">July - Oct, 2019</p>
-            <ul class="bullets">
-              <li>
-                Achieved significant page-load time improvements by optimizing
-                database operations
-              </li>
-              <li>Planned and implemented A/B feature tests</li>
-              <li>Streamlined legacy PHP codebase</li>
-            </ul>
+        <div class="entry" data-template="work-experience">
+          <div class="entry-title-container">
+            <h3 class="title">Full Stack Developer</h3>
+            <h4 class="place">Wayfair</h4>
           </div>
-          <div>
-            <span class="entry-title-container">
-              <h3 class="job-title">Full Stack Developer</h3>
-              <h4 class="org">
-                Ombud
-              </h4>
-            </span>
-            <p class="dates">Jan 2015 - July, 2019</p>
-            <ul class="bullets">
-              <li>
-                Joined as 3rd developer on team creating a new enterprise
-                sales-enablement platform
-              </li>
-              <li>
-                End-to-end planning and implementation of new features,
-                including data modeling, REST API design, UX design, and UI code
-              </li>
-              <li>
-                Created in-house and customer-facing tools for complex data
-                imports, saving over a thousand person-hours.
-              </li>
-              <li>
-                Developed in-house libraries, utilities and tools for form
-                management, tabular data display, and query handling
-              </li>
-              <li>
-                Working with customer success team to triage bugs and feature
-                requests
-              </li>
-            </ul>
+          <p class="dates">July - Oct, 2019</p>
+          <p data-if="responsibilities" class="list-subtitle">
+            <strong>Responsibilities</strong>
+          </p>
+          <ul data-if="responsibilities">
+            <li data-template="responsibilities">
+              Planning and implementing A/B feature tests
+            </li>
+            <li data-template="responsibilities">
+              Streamlining legacy PHP codebase to increase developer efficiency
+              and reduce bugs
+            </li>
+          </ul>
+          <p data-if="key-results" class="list-subtitle">
+            <strong>Key Results</strong>
+          </p>
+          <ul data-if="key-results">
+            <li data-template="key-results">
+              Achieved significant page-load time improvements by optimizing
+              database operations
+            </li>
+          </ul>
+        </div>
+        <div class="entry" data-template="work-experience">
+          <div class="entry-title-container">
+            <h3 class="title">Full Stack Developer</h3>
+            <h4 class="place">Ombud</h4>
           </div>
+          <p class="dates">Jan 2015 - July, 2019</p>
+          <p data-if="responsibilities" class="list-subtitle">
+            <strong>Responsibilities</strong>
+          </p>
+          <ul data-if="responsibilities">
+            <li data-template="responsibilities">
+              End-to-end planning and implementation of new features, including
+              data modeling, REST API design, UX design, and UI code
+            </li>
+            <li data-template="responsibilities">
+              Developing in-house libraries, utilities and tools for form
+              management, tabular data display, and query handling
+            </li>
+            <li data-template="responsibilities">
+              Triaging bugs and feature requests in collaboration with customer
+              success team and other stakeholders
+            </li>
+          </ul>
+          <p data-if="key-results" class="list-subtitle">
+            <strong>Key Results</strong>
+          </p>
+          <ul data-if="key-results">
+            <li data-template="key-results">
+              Joined as 3rd developer on team, built a new enterprise
+              sales-enablement platform
+            </li>
+            <li data-template="key-results">
+              Created in-house and customer-facing tools for complex data
+              imports, saving thousands of person-hours
+            </li>
+          </ul>
+        </div>
+        <div class="entry" data-template="work-experience">
+          <div class="entry-title-container">
+            <h3 class="title">Legal Fellow</h3>
+            <h4 class="place">Conservation Law Foundation</h4>
+          </div>
+          <p class="dates">Nov 2012 - Jan 2013</p>
         </div>
       </section>
       <section>
         <h2>Education</h2>
         <hr />
-        <div class="education">
-          <div>
-            <span class="entry-title-container">
-              <h3 class="degree">Full Stack Web Development</h3>
-              <h4 class="institution">RefactorU Bootcamp</h4>
-            </span>
-            <p class="year">2014</p>
-            <ul class="bullets"></ul>
+        <div class="entry" data-template="education">
+          <div data-container="education">
+            <div class="entry-title-container">
+              <h3 class="title">Full Stack Web Development</h3>
+              <h4 class="place">RefactorU Bootcamp</h4>
+            </div>
+            <p class="dates">2014</p>
           </div>
-          <div>
-            <span class="entry-title-container">
-              <h3 class="degree">J.D.</h3>
-              <h4 class="institution">Northeastern University</h4>
-            </span>
-            <p class="year">2012</p>
-            <ul class="bullets"></ul>
+        </div>
+        <div class="entry" data-template="education">
+          <div data-container="education">
+            <div class="entry-title-container">
+              <h3 class="title">J.D.</h3>
+              <h4 class="place">Northeastern University</h4>
+            </div>
+            <p class="dates">2012</p>
           </div>
-          <div>
-            <span class="entry-title-container">
-              <h3 class="degree">B.S. in Mathematics</h3>
-              <h4 class="institution">University of Illinois</h4>
-            </span>
-            <p class="year">2007</p>
-            <ul class="bullets">
-              <li>
+        </div>
+        <div class="entry" data-template="education">
+          <div data-container="education">
+            <div class="entry-title-container">
+              <h3 class="title">B.S. in Mathematics</h3>
+              <h4 class="place">University of Illinois</h4>
+            </div>
+            <p class="dates">2007</p>
+            <ul data-if="notes">
+              <li data-template="notes">
                 3.77 GPA. Graduated cum laude with Highest Distinction from Math
                 dept
               </li>
@@ -115,24 +139,16 @@
     <aside>
       <div class="contacts">
         <h4>Contact</h4>
-        <ul class="contact-links">
-          <li>
-            <a href="mailto:jtadmor@gmail.com" class="contact-link">
-              <img
-                alt="email"
-                src="icons/Email_Icon.png"
-                class="contact-logo"
-              />
+        <ul>
+          <li data-template="contacts">
+            <a href="mailto:jtadmor@gmail.com">
+              <img alt="email" src="icons/Email_Icon.png" />
               jtadmor@gmail.com
             </a>
           </li>
-          <li>
-            <a href="https://github.com/jtadmor" class="contact-link">
-              <img
-                alt="github"
-                src="icons/GitHub-Mark-32px.png"
-                class="contact-logo"
-              />
+          <li data-template="contacts">
+            <a href="https://github.com/jtadmor">
+              <img alt="github" src="icons/GitHub-Mark-32px.png" />
               jtadmor
             </a>
           </li>
@@ -140,12 +156,12 @@
       </div>
       <div class="technologies">
         <h4>Technologies</h4>
-        <ul class="technologies-used">
-          <li>Node</li>
-          <li>Elasticsearch</li>
-          <li>React / Redux</li>
-          <li>PostgresSQL</li>
-          <li>HTML / CSS / DOM APIs</li>
+        <ul>
+          <li data-template="technologies">Node</li>
+          <li data-template="technologies">Elasticsearch</li>
+          <li data-template="technologies">React / Redux</li>
+          <li data-template="technologies">PostgresSQL</li>
+          <li data-template="technologies">HTML / CSS / DOM APIs</li>
         </ul>
       </div>
     </aside>

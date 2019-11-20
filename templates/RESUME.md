@@ -1,29 +1,38 @@
-## _name Resume
+## $name Resume
 
-_description
+*$description*
 
 ### Contact
-{#each contact-links}
-[<img src="_icon" alt="_type" height="16px" width="16px"> _content](_href)
-{/each contact-links}
+{#each contacts}
+[<img src="$icon" alt="$type" height="16px" width="16px"> $content]($href)
+{/each contacts}
 
-### Technologies used
-{#each technologies-used}
-* _technologies-used
-{/each technologies-used}
+### Technologies
+{#each technologies}
+* $technologies
+{/each technologies}
 
 ### Work Experience
 {#each work-experience}
-*_title*, __org_, _dates
-{#each bullets}
-* _bullets
-{/each bullets}
+**$title**, *$org*, $dates
+{#if responsibilities}
+**Responsibilities**
+{#each responsibilities}
+* $responsibilities
+{/each responsibilities}
+{/if responsibilities}
+{#if key-results}
+**Key Results**
+{#each key-results}
+* $key-results
+{/each key-results}
+{/if key-results}
 {/each work-experience}
 
 ### Education
 {#each education}
-*_degree*, __institution_, _year
-{#each bullets}
-* _bullets
-{/each bullets}
+**$degree**, *$institution*, $year
+{#each notes}
+* $notes
+{/each notes}
 {/each education}

@@ -1,6 +1,6 @@
 {
   "name": "Yoel Tadmor",
-  "contact-links": [{
+  "contacts": [{
     "type": "email",
     "href": "mailto:jtadmor@gmail.com",
     "icon": "icons/Email_Icon.png",
@@ -11,8 +11,8 @@
     "icon": "icons/GitHub-Mark-32px.png",
     "content": "jtadmor"
   }],
-  "description": "Product- and people- oriented software developer. Seeking a team that strives for excellence while doing socially valuable work. My ideal organization would be agile, minimally hierarchical, open-minded, forward-looking, and remote-friendly.",
-  "technologies-used": [
+  "description": "Product- and people- oriented software developer. I excel at working with stakeholders to create strategy and then driving implementation. Seeking a team that strives for excellence while doing socially valuable work. My ideal organization would be agile, minimally hierarchical, open-minded, forward-looking, and remote-friendly.",
+  "technologies": [
     "Node",
     "Elasticsearch",
     "React / Redux",
@@ -23,38 +23,48 @@
     "org": "Wayfair",
     "title": "Full Stack Developer",
     "dates": "July - Oct, 2019",
-    "bullets": [
-      "Achieved significant page-load time improvements by optimizing database operations",
-      "Planned and implemented A/B feature tests",
-      "Streamlined legacy PHP codebase"
+    "responsibilities": [
+      "Planning and implementing A/B feature tests",
+      "Streamlining legacy PHP codebase to increase developer efficiency and reduce bugs"
+    ],
+    "key-results": [
+      "Achieved significant page-load time improvements by optimizing database operations"
     ]
   }, {
     "org": "Ombud",
     "title": "Full Stack Developer",
     "dates": "Jan 2015 - July, 2019",
-    "bullets": [
-      "Joined as 3rd developer on team creating a new enterprise sales-enablement platform",
+    "responsibilities": [
       "End-to-end planning and implementation of new features, including data modeling, REST API design, UX design, and UI code",
-      "Created in-house and customer-facing tools for complex data imports, saving over a thousand person-hours.",
-      "Developed in-house libraries, utilities and tools for form management, tabular data display, and query handling",
-      "Working with customer success team to triage bugs and feature requests"
+      "Developing in-house libraries, utilities and tools for form management, tabular data display, and query handling",
+      "Triaging bugs and feature requests in collaboration with customer success team and other stakeholders"
+    ],
+    "key-results": [
+      "Joined as 3rd developer on team, built a new enterprise sales-enablement platform",
+      "Created in-house and customer-facing tools for complex data imports, saving thousands of person-hours"
     ]
+  }, {
+    "org": "Conservation Law Foundation",
+    "title": "Legal Fellow",
+    "dates": "Nov 2012 - Jan 2013",
+    "responsibilities": [],
+    "key-results": []
   }],
   "education": [{
     "degree": "Full Stack Web Development",
     "institution": "RefactorU Bootcamp",
     "year": "2014",
-    "bullets": []
+    "notes": []
   }, {
     "degree": "J.D.",
     "institution": "Northeastern University",
     "year": "2012",
-    "bullets": []
+    "notes": []
   }, {
     "degree": "B.S. in Mathematics",
     "institution": "University of Illinois",
     "year": "2007",
-    "bullets": [
+    "notes": [
       "3.77 GPA. Graduated cum laude with Highest Distinction from Math dept"
     ]
   }]

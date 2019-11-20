@@ -1,41 +1,48 @@
 "use strict"
 const fs = require('fs')
 const { JSDOM } = require('jsdom')
+const {
+  isEmptyContent,
+  findConditionalEls,
+  findTemplateEl,
+  findContainerEl
+} = require('./helpers')
 
-// Grab data and temapltes, create the DOM
+// Grab data and templates, create the DOM
 const RESUME = require('./resume')
 const BASE_HTML = fs.readFileSync('./templates/resume.html', 'utf-8')
 let MARKDOWN = fs.readFileSync('./templates/RESUME.md', 'utf-8')
 const { document } = new JSDOM(BASE_HTML).window
 
-
 // Add everything
 Object.keys(RESUME).forEach(content_key => {
   const content = RESUME[content_key]
 
-  addHtml(content_key, content)
+  addHtml(content_key, content, document.body)
   MARKDOWN = addReadme(content_key, content, MARKDOWN)
 })
 
 // Write out
-fs.writeFileSync('resume.html', document.documentElement.outerHTML)
+fs.writeFileSync('resume.html', '<!DOCTYPE html>\n' + document.documentElement.outerHTML)
 fs.writeFileSync('RESUME.md', MARKDOWN)
 
 
-// HELPERS
-function addHtml(content_key, content) {
-  const container = document.querySelector(`.${content_key}`)
+function addHtml(key, content, parent) {
+  // Remove all DOM elements with data-if="key" when content is empty
+  if (isEmptyContent(content)) {
+    findConditionalEls(key, parent).forEach(el => {
+      el.parentNode.removeChild(el)
+    })
 
-  if (!container) {
-    throw new Error(`No DOM container found for ${content_key}`)
+    return
   }
 
-  addContentToContainer(container, content_key, content)
-}
-
-function addContentToContainer(container, content_key, content) {
   if (typeof content === 'string') {
-    container.textContent = content
+    if (parent.innerHTML.match(`_${key}`)) {
+      parent.innerHTML = parent.innerHTML.replace(`_${key}`, content)
+    } else {
+      parent.textContent = content
+    }
   } else if (Array.isArray(content)) {
     /*
       For lists, there should be a scaffold component as the first child of the container.
@@ -43,54 +50,54 @@ function addContentToContainer(container, content_key, content) {
       We remove the scaffold, iterate over the content array,
       and insert.
     */
-    let template = container.firstChild
+    const template = findTemplateEl(key, parent)
 
-    while (template && !template.tagName) {
-      template = template.nextSibling
-    }
-
-    if (!template) {
-      throw new Error(`No DOM template found for ${content_key} where the content is complex`)
-    }
-
-    content.forEach(item => {
+    const clones = content.map(item => {
       const clone = template.cloneNode()
       clone.innerHTML = template.innerHTML
 
-      addContentToContainer(clone, content_key, item)
+      addHtml(key, item, clone)
 
-      container.appendChild(clone)
+      return clone
     })
 
-    container.removeChild(template)
+    template.after(...clones)
+    template.parentNode.removeChild(template)
   } else {
-    Object.keys(content).forEach(key => {
-      const value = content[key]
+    const container = findContainerEl(key, parent)
 
-      if (typeof value === 'string') {
-        container.innerHTML = container.innerHTML.replace(`_${key}`, value)
-      } else {
-        const sub_container = container.querySelector(`.${key}`)
-        addContentToContainer(sub_container, key, value)
-      }
+    Object.keys(content).forEach(k => {
+      addHtml(k, content[k], container)
     })
   }
 }
 
-function addReadme(content_key, content, str) {
+function addReadme(key, content, str) {
+  if (str.match(`{#if ${key}}`)) {
+    if (isEmptyContent(content)) {
+      const reg_str = `{#if ${key}}\n((.|\n|\r)+)(?={\/if ${key}){\/if ${key}}\n`
+      const reg = new RegExp(reg_str, 'g')
+      str = str.replace(reg, '')
+    } else {
+      const reg_str = `({#if ${key}}\n|{/if ${key}}\n)`
+      const reg = new RegExp(reg_str, 'g')
+      str = str.replace(reg, '')
+    }
+  }
+
   if (typeof content === 'string') {
-    return str.replace(`_${content_key}`, content)
+    return str.replace(`$${key}`, content)
   } else if (Array.isArray(content)) {
-    const reg_str = `{#each ${content_key}}\n((.|\n|\r)+)(?={\/each ${content_key}){\/each ${content_key}}`
+    const reg_str = `{#each ${key}}\n((.|\n|\r)+)(?={\/each ${key}){\/each ${key}}`
     const reg = new RegExp(reg_str)
     return str.replace(reg, (m, capture) => (
       content
-        .map(item => addReadme(content_key, item, capture))
+        .map(item => addReadme(key, item, capture))
         .join('\n')
     ))
   } else {
-    Object.keys(content).forEach(key => {
-      str = addReadme(key, content[key], str)
+    Object.keys(content).forEach(k => {
+      str = addReadme(k, content[k], str)
     })
 
     return str

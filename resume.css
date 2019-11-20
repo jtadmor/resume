@@ -1,11 +1,26 @@
 :root {
-  --content-width: 66%
+  --content-width: 66%;
+  --left-padding: 2.5rem;
+  --gray: gray;
 }
 
-/* this is needed to avoid chrome printing a PDF with header and footer text */
 @media print {
-  @page { margin: 0; }
-  body { margin: 1cm; }
+  @page {
+    margin: 1.6cm 1cm;
+  }
+
+  .entry {
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3, hr {
+    page-break-after: avoid;
+  }
+
+  /* gray does not seem to show up well */
+  :root {
+    --gray: lightgray;
+  }
 }
 
 * {
@@ -18,7 +33,7 @@ body {
   flex-direction: row;
 }
 
-h1, h2, h3, h4 {
+h1, h2,  h3, h4 {
   color: purple;
 }
 
@@ -26,17 +41,13 @@ main {
   width: var(--content-width);
 }
 
-
-/* MAIN CONTENT */
-section, header {
-  margin-left: 2.5rem;
+header, section {
+  padding-left: var(--left-padding);
 }
 
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+/* HEADER */
+header {
+  margin-bottom: 3rem;
 }
 
 .name {
@@ -44,13 +55,19 @@ section, header {
 }
 
 .description {
-  color: gray;
+  color: var(--gray);
   font-size: 0.9rem;
   line-height: 1.3rem;
 }
 
-h2 {
+
+/* MAIN CONTENT */
+section h2 {
   margin-bottom: 0.8rem;
+}
+
+.entry {
+  margin-bottom: 2.5rem;
 }
 
 .entry-title-container {
@@ -60,29 +77,34 @@ h2 {
   margin: 0;
 }
 
-.bullets {
-  margin: 0 0 1.25rem 0;
-  font-size: 0.9rem;
-  list-style-type: circle;
-}
-
-.job-title, .degree {
+.entry-title-container .title {
   color: black;
   margin: 0.5rem 0 0 0;
   flex: 1 1 66%;
 }
 
-.org, .institution {
+.entry-title-container .place {
   margin: 0.5rem 0 0 2rem;
   flex: 1 1 50%;
+  color: purple;
 }
 
-.dates, .year {
+.entry .dates {
   font-size: 0.9rem;
   margin: .25rem 0 0.75rem 0;
-  color: gray;
+  color: var(--gray);
 }
 
+.list-subtitle {
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.entry ul {
+  margin: 0 0 1.25rem 0;
+  font-size: 0.9rem;
+  list-style-type: circle;
+}
 
 
 /* SIDE NAV */
@@ -99,20 +121,20 @@ aside ul {
   padding-left: 0;
 }
 
-.contacts {
-  margin-bottom: 2rem;
-}
-
-.technologies {
-  color: gray;
-}
-
-.technologies-used {
+.technologies ul {
   list-style-type: none;
   line-height: 1.5rem;
 }
 
-.contact-links {
+.technologies li {
+  color: var(--gray);
+}
+
+.contacts {
+  margin-bottom: 2rem;
+}
+
+.contacts ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -121,7 +143,7 @@ aside ul {
   list-style: none;
 }
 
-.contact-link {
+.contacts a {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -129,10 +151,10 @@ aside ul {
   margin-bottom: .5rem;
 
   text-decoration: none;
-  color: gray;
+  color: var(--gray);
 }
 
-.contact-logo {
+.contacts img {
   margin-right: .5rem;
   width: 1rem;
   height: 1rem;

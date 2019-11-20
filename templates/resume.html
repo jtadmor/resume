@@ -8,43 +8,46 @@
   </head>
   <body>
     <main>
-      <header class="header">
-        <div class="bio">
-          <h1 class="name"></h1>
-          <hr />
-          <p class="description"></p>
-        </div>
+      <header>
+        <h1 class="name">_name</h1>
+        <hr />
+        <p class="description">_description</p>
       </header>
       <section>
-        <h2>Work Experience</h3>
+        <h2>Work Experience</h2>
         <hr />
-        <div class="work-experience">
-          <div>
-            <span class="entry-title-container">
-              <h3 class="job-title">_title</h3>
-              <h4 class="org">
-                _org
-              </h4>
-            </span>
-            <p class="dates">_dates</p>
-            <ul class="bullets">
-              <li></li>
-            </ul>
+        <div class="entry" data-template="work-experience">
+          <div class="entry-title-container">
+            <h3 class="title">_title</h3>
+            <h4 class="place">_org</h4>
           </div>
+          <p class="dates">_dates</p>
+          <p data-if="responsibilities" class="list-subtitle">
+            <strong>Responsibilities</strong>
+          </p>
+          <ul data-if="responsibilities">
+            <li data-template="responsibilities"></li>
+          </ul>
+          <p data-if="key-results" class="list-subtitle">
+            <strong>Key Results</strong>
+          </p>
+          <ul data-if="key-results">
+            <li data-template="key-results"></li>
+          </ul>
         </div>
       </section>
       <section>
-        <h2>Education</h3>
+        <h2>Education</h2>
         <hr />
-        <div class="education">
-          <div>
-            <span class="entry-title-container">
-              <h3 class="degree">_degree</h3>
-              <h4 class="institution">_institution</h4>
-            </span>
-            <p class="year">_year</p>
-            <ul class="bullets">
-              <li></li>
+        <div class="entry" data-template="education">
+          <div data-container="education">
+            <div class="entry-title-container">
+              <h3 class="title">_degree</h3>
+              <h4 class="place">_institution</h4>
+            </div>
+            <p class="dates">_year</p>
+            <ul data-if="notes">
+              <li data-template="notes"></li>
             </ul>
           </div>
         </div>
@@ -53,10 +56,10 @@
     <aside>
       <div class="contacts">
         <h4>Contact</h4>
-        <ul class="contact-links">
-          <li>
-            <a href="_href" class="contact-link">
-              <img alt="_type" src="_icon" class="contact-logo">
+        <ul>
+          <li data-template="contacts">
+            <a href="_href">
+              <img alt="_type" src="_icon">
               _content
             </a>
           </li>
@@ -64,8 +67,8 @@
       </div>
       <div class="technologies">
         <h4>Technologies</h4>
-        <ul class="technologies-used">
-          <li></li>
+        <ul>
+          <li data-template="technologies"></li>
         </ul>
       </div>
     </aside>

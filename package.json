@@ -4,11 +4,14 @@
   "scripts": {
     "build": "node build && prettier resume.html --write",
     "test": "yarn run build && open resume.html",
-    "pdf": "yarn run build && bash -i make_pdf.sh"
+    "pdf": "yarn run build && node make_pdf"
   },
   "devDependencies": {
     "jsdom": "^15.2.1",
     "prettier": "^1.19.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^2.0.0"
+  }
 }

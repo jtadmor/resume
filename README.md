@@ -10,19 +10,37 @@
 The `templates/` folder contains the scaffolded templates. The `build.js` script inserts the data from `resume.json` using the following rules:
 
 #### HTML
-For each recursive `key -> value` in `resume.json`:
-The key must directly match a class on some element, this is then used as the container.
-If `value` is a string, it is will be inserted as the `textContent` of that element.
-If `value` is an object, the `innerHTML` will replace `_${key}` with `value`. This means you can use values for attribute values (this is helpful for `href`, image sources, etc) or for text content.
+`build.js` will recursively walk though each `{ [key]: [content] }` in `resume.json` and will make changes to the DOM, using the HTML template.
 
-For repeated data (represented as arrays), the first child of the container is treated as a template, and is used as the "container" in the above logic. A new container is created and inserted for each element of the array.
+Changes are scoped to a parent container (defaults to `document.body` for top level keys) based on the key and type of content.
+
+**Strings**
+The parent `innerHTML` will replace `_key` with `content`. This means you can use `content` to define HTML attributes (e.g. `a.href`, `img.src`).
+
+If no `_key` is found, the parent container has `textContent` set to `content`. This is a useful shorthand for lists of strings.
+
+**Objects**
+A container must be defined by `data-container="key"`. The object keys are iterated over, using this container as the parent.
+
+**Arrays**
+A template must be defined using `data-template="key"`. This template is then treated as the parent, and the list of data is iterated over, inserting a new copy of the template that is manipulated according to the above rules.
+
+The template is automatically removed after the iteration.
+
+*Note: To include HTML items only when content is non-empty, use `data-if="key"`.*
 
 #### Markdown
-For each recursive `key -> value` in `resume.json`:
-If `value` is a string, it will be inserted where the first instance of `_${key}` is found.
-This means you should use
+`build.js` will recursively walk though each `{ [key]: [content] }` in `resume.json` and will append to the string based on the Markdown template.
 
-For repeated data, `{#each key}...{/each}` syntax is used.
-If each entry is an object, you can use `_subkey1`, `_subkey2` within the `{each}` block.
-If each entry is a string, simply use `_key`.
-Note that these can be nested, see the example of `bullets` in `work-experience`.
+**Strings**
+`$key` will be be replaced with `content`
+
+**Objects**
+The keys will be iterated over.
+
+**Arrays**
+Use `{#each key}...{/each key}` syntax, placing a template inside. The list of data is iterated over, inserting a new copy of this template based on the above rules.
+If each entry is an object, use use `$subkey1`, `$subkey2` within the `{each}` block.
+If each entry is a string, use `$key`.
+
+*Note: To include markdown items only when content is non-empty, use `{#if key}...{/if key}`.*
