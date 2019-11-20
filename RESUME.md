@@ -1,6 +1,6 @@
 ## Yoel Tadmor Resume
 
-*Product- and people- oriented software developer. I excel at working with stakeholders to create strategy and then driving implementation. Seeking a team that strives for excellence while doing socially valuable work. My ideal organization would be agile, minimally hierarchical, open-minded, forward-looking, and remote-friendly.*
+*Product- and people- oriented software developer. I excel at collaborating with stakeholders to define product vision and have a proven track record of driving technical implementation. Seeking a team that strives for excellence while doing socially valuable work. My ideal organization would be agile, minimally hierarchical, open-minded, forward-looking, and remote-friendly.*
 
 ### Contact
 <!-- Would like not to need HTML but sizing for images is not consistent in markdown -->
