@@ -15,17 +15,53 @@
         <h1 class="name">Yoel Tadmor</h1>
         <hr />
         <p class="description">
-          Product- and people- oriented software developer. I excel at
-          collaborating with stakeholders to define product vision and have a
-          proven track record of driving technical implementation. Seeking a
-          team that strives for excellence while doing socially valuable work.
-          My ideal organization would be agile, minimally hierarchical,
-          open-minded, forward-looking, and remote-friendly.
+          Product- and people- oriented engineer. I excel at collaborating with
+          stakeholders to define product vision and have a proven track record
+          of driving technical implementation. Seeking a team that strives for
+          excellence while doing socially valuable work. My ideal organization
+          would be agile, minimally hierarchical, open-minded, forward-looking,
+          and ambitious.
         </p>
       </header>
       <section>
         <h2>Work Experience</h2>
         <hr />
+        <div class="entry" data-template="work-experience">
+          <div class="entry-title-container">
+            <h3 class="title">Engineer, Team Lead</h3>
+            <h4 class="place">Tulip Interfaces</h4>
+          </div>
+          <p class="dates">Jan 2020 - Present</p>
+          <p data-if="responsibilities" class="list-subtitle">
+            <strong>Responsibilities</strong>
+          </p>
+          <ul data-if="responsibilities">
+            <li data-template="responsibilities">
+              Onboarding and mentoring engineers. Implementing process
+              improvements.
+            </li>
+            <li data-template="responsibilities">
+              Working with product to scope features. Defining technical
+              implemention strategy.
+            </li>
+          </ul>
+          <p data-if="key-results" class="list-subtitle">
+            <strong>Key Results</strong>
+          </p>
+          <ul data-if="key-results">
+            <li data-template="key-results">Grew team from 3 to 7 engineers</li>
+            <li data-template="key-results">
+              Developed sandboxed testing environment for application building
+              tool
+            </li>
+            <li data-template="key-results">
+              Identified and optimized performance bottlenecks
+            </li>
+            <li data-template="key-results">
+              Implemented end-to-end functional testing framework
+            </li>
+          </ul>
+        </div>
         <div class="entry" data-template="work-experience">
           <div class="entry-title-container">
             <h3 class="title">Full Stack Developer</h3>
@@ -37,11 +73,12 @@
           </p>
           <ul data-if="responsibilities">
             <li data-template="responsibilities">
-              Planning and implementing A/B feature tests
+              Plan and implement new features and A/B tests to improve customer
+              search experience.
             </li>
             <li data-template="responsibilities">
-              Streamlining legacy PHP codebase to increase developer efficiency
-              and reduce bugs
+              Reduce bugs and increase velocity by identifying and improving
+              problem areas in legacy PHP codebase.
             </li>
           </ul>
           <p data-if="key-results" class="list-subtitle">
@@ -49,8 +86,11 @@
           </p>
           <ul data-if="key-results">
             <li data-template="key-results">
-              Achieved significant page-load time improvements by optimizing
-              database operations
+              Improved page-load times by 25% by optimizing Redis reads,
+              generating millions in added revenue
+            </li>
+            <li data-template="key-results">
+              Implemented functional PHP utilities
             </li>
           </ul>
         </div>
@@ -65,8 +105,8 @@
           </p>
           <ul data-if="responsibilities">
             <li data-template="responsibilities">
-              End-to-end planning and implementation of new features, including
-              data modeling, REST API design, UX design, and UI code
+              End-to-end planning and implementation, including database
+              architecture, REST API design, UX design, and UI code
             </li>
             <li data-template="responsibilities">
               Developing in-house libraries, utilities and tools for form
@@ -82,8 +122,8 @@
           </p>
           <ul data-if="key-results">
             <li data-template="key-results">
-              Joined as 3rd developer on team, built a new enterprise
-              sales-enablement platform
+              Joined as 3rd developer on team, built an enterprise-ready
+              sales-enablement platform used by Fortune 500 companies
             </li>
             <li data-template="key-results">
               Created in-house and customer-facing tools for complex data
@@ -158,11 +198,18 @@
       <div class="technologies">
         <h4>Technologies</h4>
         <ul>
-          <li data-template="technologies">Node</li>
-          <li data-template="technologies">Elasticsearch</li>
-          <li data-template="technologies">React / Redux</li>
-          <li data-template="technologies">PostgresSQL</li>
-          <li data-template="technologies">HTML / CSS / DOM APIs</li>
+          <li data-template="technologies">
+            Databases: Elasticsearch, Postgres, Mongo, Redis
+          </li>
+          <li data-template="technologies">
+            Languages: Javascript / Typescript, Go, Groovy, PHP
+          </li>
+          <li data-template="technologies">
+            Frameworks / Libraries: React, Redux, SlateJS
+          </li>
+          <li data-template="technologies">Web: DOM APIs, HTML, CSS</li>
+          <li data-template="technologies">Testing: Jest, Cypress</li>
+          <li data-template="technologies">Build tools: Webpack</li>
         </ul>
       </div>
     </aside>

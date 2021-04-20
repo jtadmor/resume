@@ -1,16 +1,19 @@
 {
   "name": "Yoel Tadmor",
-  "contacts": [{
-    "type": "email",
-    "href": "mailto:jtadmor@gmail.com",
-    "icon": "icons/Email_Icon.png",
-    "content": "jtadmor@gmail.com"
-  }, {
-    "type": "github",
-    "href": "https:\//github.com/jtadmor",
-    "icon": "icons/GitHub-Mark-32px.png",
-    "content": "jtadmor"
-  }],
+  "contacts": [
+    {
+      "type": "email",
+      "href": "mailto:jtadmor@gmail.com",
+      "icon": "icons/Email_Icon.png",
+      "content": "jtadmor@gmail.com"
+    },
+    {
+      "type": "github",
+      "href": "https://github.com/jtadmor",
+      "icon": "icons/GitHub-Mark-32px.png",
+      "content": "jtadmor"
+    }
+  ],
   "description": "Product- and people- oriented engineer. I excel at collaborating with stakeholders to define product vision and have a proven track record of driving technical implementation. Seeking a team that strives for excellence while doing socially valuable work. My ideal organization would be agile, minimally hierarchical, open-minded, forward-looking, and ambitious.",
   "technologies": [
     "Databases: Elasticsearch, Postgres, Mongo, Redis",
@@ -20,68 +23,77 @@
     "Testing: Jest, Cypress",
     "Build tools: Webpack"
   ],
-  "work-experience": [{
-    "org": "Tulip Interfaces",
-    "title": "Engineer, Team Lead",
-    "dates": "Jan 2020 - Present",
-    "responsibilities": [
-      "Onboarding and mentoring engineers. Implementing process improvements.",
-      "Working with product to scope features. Defining technical implemention strategy.",
-    ],
-    "key-results": [
-      "Grew team from 3 to 7 engineers"
-      "Developed sandboxed testing environment for application building tool",
-      "Identified and optimized performance bottlenecks",
-      "Implemented end-to-end functional testing framework"
-    ],
-  },{
-    "org": "Wayfair",
-    "title": "Full Stack Developer",
-    "dates": "July - Oct, 2019",
-    "responsibilities": [
-      "Plan and implement new features and A/B tests to improve customer search experience.",
-      "Reduce bugs and increase velocity by identifying and improving problem areas in legacy PHP codebase."
-    ],
-    "key-results": [
-      "Improved page-load times by 25% by optimizing Redis reads, generating millions in added revenue",
-      "Implemented functional PHP utilities"
-    ]
-  }, {
-    "org": "Ombud",
-    "title": "Full Stack Developer",
-    "dates": "Jan 2015 - July, 2019",
-    "responsibilities": [
-      "End-to-end planning and implementation, including database architecture, REST API design, UX design, and UI code",
-      "Developing in-house libraries, utilities and tools for form management, tabular data display, and query handling",
-      "Triaging bugs and feature requests in collaboration with customer success team and other stakeholders"
-    ],
-    "key-results": [
-      "Joined as 3rd developer on team, built an enterprise-ready sales-enablement platform used by Fortune 500 companies",
-      "Created in-house and customer-facing tools for complex data imports, saving thousands of person-hours"
-    ]
-  }, {
-    "org": "Conservation Law Foundation",
-    "title": "Legal Fellow",
-    "dates": "Nov 2012 - Jan 2013",
-    "responsibilities": [],
-    "key-results": []
-  }],
-  "education": [{
-    "degree": "Full Stack Web Development",
-    "institution": "RefactorU Bootcamp",
-    "year": "2014",
-    "notes": []
-  }, {
-    "degree": "J.D.",
-    "institution": "Northeastern University",
-    "year": "2012",
-    "notes": []
-  }, {
-    "degree": "B.S. in Mathematics",
-    "institution": "University of Illinois",
-    "year": "2007",
-    "notes": [
-      "3.77 GPA. Graduated cum laude with Highest Distinction from Math dept"
-    ]
-  }]
+  "work-experience": [
+    {
+      "org": "Tulip Interfaces",
+      "title": "Engineer, Team Lead",
+      "dates": "Jan 2020 - Present",
+      "responsibilities": [
+        "Onboarding and mentoring engineers. Implementing process improvements.",
+        "Working with product to scope features. Defining technical implemention strategy."
+      ],
+      "key-results": [
+        "Grew team from 3 to 7 engineers",
+        "Developed sandboxed testing environment for application building tool",
+        "Identified and optimized performance bottlenecks",
+        "Implemented end-to-end functional testing framework"
+      ]
+    },
+    {
+      "org": "Wayfair",
+      "title": "Full Stack Developer",
+      "dates": "July - Oct, 2019",
+      "responsibilities": [
+        "Plan and implement new features and A/B tests to improve customer search experience.",
+        "Reduce bugs and increase velocity by identifying and improving problem areas in legacy PHP codebase."
+      ],
+      "key-results": [
+        "Improved page-load times by 25% by optimizing Redis reads, generating millions in added revenue",
+        "Implemented functional PHP utilities"
+      ]
+    },
+    {
+      "org": "Ombud",
+      "title": "Full Stack Developer",
+      "dates": "Jan 2015 - July, 2019",
+      "responsibilities": [
+        "End-to-end planning and implementation, including database architecture, REST API design, UX design, and UI code",
+        "Developing in-house libraries, utilities and tools for form management, tabular data display, and query handling",
+        "Triaging bugs and feature requests in collaboration with customer success team and other stakeholders"
+      ],
+      "key-results": [
+        "Joined as 3rd developer on team, built an enterprise-ready sales-enablement platform used by Fortune 500 companies",
+        "Created in-house and customer-facing tools for complex data imports, saving thousands of person-hours"
+      ]
+    },
+    {
+      "org": "Conservation Law Foundation",
+      "title": "Legal Fellow",
+      "dates": "Nov 2012 - Jan 2013",
+      "responsibilities": [],
+      "key-results": []
+    }
+  ],
+  "education": [
+    {
+      "degree": "Full Stack Web Development",
+      "institution": "RefactorU Bootcamp",
+      "year": "2014",
+      "notes": []
+    },
+    {
+      "degree": "J.D.",
+      "institution": "Northeastern University",
+      "year": "2012",
+      "notes": []
+    },
+    {
+      "degree": "B.S. in Mathematics",
+      "institution": "University of Illinois",
+      "year": "2007",
+      "notes": [
+        "3.77 GPA. Graduated cum laude with Highest Distinction from Math dept"
+      ]
+    }
+  ]
 }
