@@ -1,6 +1,6 @@
 ## Yoel Tadmor Resume
 
-*Product- and people- oriented engineer. I excel at collaborating with stakeholders to define product vision and have a proven track record of driving technical implementation. Seeking a team that strives for excellence while doing socially valuable work. My ideal organization would be agile, minimally hierarchical, open-minded, forward-looking, and ambitious.*
+*Product- and people- oriented engineer. I excel at collaborating with stakeholders to define product vision and technical roadmaps. My ideal organization would be agile, minimally hierarchical, open-minded, forward-looking, and ambitious.*
 
 ### Contact
 <!-- Would like not to need HTML but sizing for images is not consistent in markdown -->
@@ -10,7 +10,7 @@
 
 
 ### Technologies
-* Databases: Elasticsearch, Postgres, Mongo, Redis
+* Databases: Elasticsearch, Postgres, Timescale, Mongo, Redis
 
 * Languages: Javascript / Typescript, Go, Groovy, PHP
 
@@ -24,22 +24,22 @@
 
 
 ### Work Experience
-### Engineer, Team Lead, *Tulip Interfaces*, Jan 2020 - Present
+### Engineer, Team Lead: Data, *Tulip Interfaces*, Jan 2020 - Present
 
 #### Responsibilities
-* Onboarding and mentoring engineers. Implementing process improvements.
+* Overseeing technical strategy and architecture for team, which owns inflow, storage, analysis and presentation of data within the platform and accessibility of the data within the no-code application builder
 
-* Working with product to scope features. Defining technical implemention strategy.
+* Onboarding, mentoring, and growing our engineers and other technical leaders.
+
+* Stakeholder management, technical roadmap prioritization.
 
 
 #### Key Results
-* Grew team from 3 to 7 engineers
+* Grew team from 3 to 8 engineers
 
-* Developed sandboxed testing environment for application building tool
+* Identified and optimized performance and stability concerns. For particularly problematic cases, this lead to cutting query times down by 90+%, reducing dropped events by 90+%, and reducing startup time of critical components by 90+%
 
-* Identified and optimized performance bottlenecks
-
-* Implemented end-to-end functional testing framework
+* Designed new data model and data persistence strategy for all data collected within the platform
 
 
 
@@ -61,22 +61,17 @@
 ### Full Stack Developer, *Ombud*, Jan 2015 - July, 2019
 
 #### Responsibilities
-* End-to-end planning and implementation, including database architecture, REST API design, UX design, and UI code
+* End-to-end planning and implementation, including data model design, service / API architecture, UI code and UX design
 
 * Developing in-house libraries, utilities and tools for form management, tabular data display, and query handling
 
 * Triaging bugs and feature requests in collaboration with customer success team and other stakeholders
 
+* Building combination of user-facing and ad-hoc tools for importing complex, semi-structured data into custom data format
+
 
 #### Key Results
-* Joined as 3rd developer on team, built an enterprise-ready sales-enablement platform used by Fortune 500 companies
-
-* Created in-house and customer-facing tools for complex data imports, saving thousands of person-hours
-
-
-
-### Legal Fellow, *Conservation Law Foundation*, Nov 2012 - Jan 2013
-
+* Joined as 3rd engineer on team that grew to 10+, built an enterprise-ready sales-enablement platform used by Fortune 500 companies
 
 
 

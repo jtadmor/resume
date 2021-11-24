@@ -1,6 +1,7 @@
 :root {
-  --content-width: 66%;
+  --content-width: 100%;
   --left-padding: 2.5rem;
+  --header-side-width: 33%;
   --gray: gray;
 }
 
@@ -28,7 +29,7 @@
   box-sizing: border-box;
 }
 
-body {
+.bio-content {
   display: flex;
   flex-direction: row;
 }
@@ -40,6 +41,11 @@ h1, h2,  h3, h4 {
 main {
   width: var(--content-width);
 }
+
+/* section hr {
+  width: calc(var(--content-width)/2);
+  margin-left: 0;
+} */
 
 header, section {
   padding-left: var(--left-padding);
@@ -73,20 +79,21 @@ section h2 {
 .entry-title-container {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: flex-start;
   margin: 0;
 }
 
 .entry-title-container .title {
   color: black;
   margin: 0.5rem 0 0 0;
-  flex: 1 1 66%;
+  flex: 1 1 50%;
 }
 
 .entry-title-container .place {
   margin: 0.5rem 0 0 2rem;
   flex: 1 1 50%;
   color: purple;
+  padding-left: calc(var(--left-padding)/2);
 }
 
 .entry .dates {
@@ -107,7 +114,7 @@ section h2 {
 }
 
 
-/* SIDE NAV */
+/* Info */
 aside {
   padding-left: 2rem;
 }
@@ -116,9 +123,17 @@ aside h4 {
   margin-bottom: 1rem;
 }
 
-aside ul {
+.bio-content ul {
   margin: 0;
   padding-left: 0;
+}
+
+.contacts {
+  flex: 1 1 50%;
+}
+
+.technologies {
+  flex: 1 1 50%;
 }
 
 .technologies ul {

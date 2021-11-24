@@ -16,19 +16,53 @@
         <hr />
         <p class="description">
           Product- and people- oriented engineer. I excel at collaborating with
-          stakeholders to define product vision and have a proven track record
-          of driving technical implementation. Seeking a team that strives for
-          excellence while doing socially valuable work. My ideal organization
-          would be agile, minimally hierarchical, open-minded, forward-looking,
-          and ambitious.
+          stakeholders to define product vision and technical roadmaps. My ideal
+          organization would be agile, minimally hierarchical, open-minded,
+          forward-looking, and ambitious.
         </p>
+        <div class="bio-content">
+          <div class="contacts">
+            <h4>Contact</h4>
+            <ul>
+              <li data-template="contacts">
+                <a href="mailto:jtadmor@gmail.com">
+                  <img alt="email" src="icons/Email_Icon.png" />
+                  jtadmor@gmail.com
+                </a>
+              </li>
+              <li data-template="contacts">
+                <a href="https://github.com/jtadmor">
+                  <img alt="github" src="icons/GitHub-Mark-32px.png" />
+                  jtadmor
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="technologies">
+            <h4>Technologies</h4>
+            <ul>
+              <li data-template="technologies">
+                Databases: Elasticsearch, Postgres, Timescale, Mongo, Redis
+              </li>
+              <li data-template="technologies">
+                Languages: Javascript / Typescript, Go, Groovy, PHP
+              </li>
+              <li data-template="technologies">
+                Frameworks / Libraries: React, Redux, SlateJS
+              </li>
+              <li data-template="technologies">Web: DOM APIs, HTML, CSS</li>
+              <li data-template="technologies">Testing: Jest, Cypress</li>
+              <li data-template="technologies">Build tools: Webpack</li>
+            </ul>
+          </div>
+        </div>
       </header>
       <section>
         <h2>Work Experience</h2>
         <hr />
         <div class="entry" data-template="work-experience">
           <div class="entry-title-container">
-            <h3 class="title">Engineer, Team Lead</h3>
+            <h3 class="title">Engineer, Team Lead: Data</h3>
             <h4 class="place">Tulip Interfaces</h4>
           </div>
           <p class="dates">Jan 2020 - Present</p>
@@ -37,28 +71,33 @@
           </p>
           <ul data-if="responsibilities">
             <li data-template="responsibilities">
-              Onboarding and mentoring engineers. Implementing process
-              improvements.
+              Overseeing technical strategy and architecture for team, which
+              owns inflow, storage, analysis and presentation of data within the
+              platform and accessibility of the data within the no-code
+              application builder
             </li>
             <li data-template="responsibilities">
-              Working with product to scope features. Defining technical
-              implemention strategy.
+              Onboarding, mentoring, and growing our engineers and other
+              technical leaders.
+            </li>
+            <li data-template="responsibilities">
+              Stakeholder management, technical roadmap prioritization.
             </li>
           </ul>
           <p data-if="key-results" class="list-subtitle">
             <strong>Key Results</strong>
           </p>
           <ul data-if="key-results">
-            <li data-template="key-results">Grew team from 3 to 7 engineers</li>
+            <li data-template="key-results">Grew team from 3 to 8 engineers</li>
             <li data-template="key-results">
-              Developed sandboxed testing environment for application building
-              tool
+              Identified and optimized performance and stability concerns. For
+              particularly problematic cases, this lead to cutting query times
+              down by 90+%, reducing dropped events by 90+%, and reducing
+              startup time of critical components by 90+%
             </li>
             <li data-template="key-results">
-              Identified and optimized performance bottlenecks
-            </li>
-            <li data-template="key-results">
-              Implemented end-to-end functional testing framework
+              Designed new data model and data persistence strategy for all data
+              collected within the platform
             </li>
           </ul>
         </div>
@@ -105,8 +144,8 @@
           </p>
           <ul data-if="responsibilities">
             <li data-template="responsibilities">
-              End-to-end planning and implementation, including database
-              architecture, REST API design, UX design, and UI code
+              End-to-end planning and implementation, including data model
+              design, service / API architecture, UI code and UX design
             </li>
             <li data-template="responsibilities">
               Developing in-house libraries, utilities and tools for form
@@ -116,27 +155,21 @@
               Triaging bugs and feature requests in collaboration with customer
               success team and other stakeholders
             </li>
+            <li data-template="responsibilities">
+              Building combination of user-facing and ad-hoc tools for importing
+              complex, semi-structured data into custom data format
+            </li>
           </ul>
           <p data-if="key-results" class="list-subtitle">
             <strong>Key Results</strong>
           </p>
           <ul data-if="key-results">
             <li data-template="key-results">
-              Joined as 3rd developer on team, built an enterprise-ready
-              sales-enablement platform used by Fortune 500 companies
-            </li>
-            <li data-template="key-results">
-              Created in-house and customer-facing tools for complex data
-              imports, saving thousands of person-hours
+              Joined as 3rd engineer on team that grew to 10+, built an
+              enterprise-ready sales-enablement platform used by Fortune 500
+              companies
             </li>
           </ul>
-        </div>
-        <div class="entry" data-template="work-experience">
-          <div class="entry-title-container">
-            <h3 class="title">Legal Fellow</h3>
-            <h4 class="place">Conservation Law Foundation</h4>
-          </div>
-          <p class="dates">Nov 2012 - Jan 2013</p>
         </div>
       </section>
       <section>
@@ -177,41 +210,5 @@
         </div>
       </section>
     </main>
-    <aside>
-      <div class="contacts">
-        <h4>Contact</h4>
-        <ul>
-          <li data-template="contacts">
-            <a href="mailto:jtadmor@gmail.com">
-              <img alt="email" src="icons/Email_Icon.png" />
-              jtadmor@gmail.com
-            </a>
-          </li>
-          <li data-template="contacts">
-            <a href="https://github.com/jtadmor">
-              <img alt="github" src="icons/GitHub-Mark-32px.png" />
-              jtadmor
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="technologies">
-        <h4>Technologies</h4>
-        <ul>
-          <li data-template="technologies">
-            Databases: Elasticsearch, Postgres, Mongo, Redis
-          </li>
-          <li data-template="technologies">
-            Languages: Javascript / Typescript, Go, Groovy, PHP
-          </li>
-          <li data-template="technologies">
-            Frameworks / Libraries: React, Redux, SlateJS
-          </li>
-          <li data-template="technologies">Web: DOM APIs, HTML, CSS</li>
-          <li data-template="technologies">Testing: Jest, Cypress</li>
-          <li data-template="technologies">Build tools: Webpack</li>
-        </ul>
-      </div>
-    </aside>
   </body>
 </html>
