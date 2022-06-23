@@ -7,7 +7,7 @@
     "pdf": "yarn run build && node make_pdf"
   },
   "devDependencies": {
-    "jsdom": "^15.2.1",
+    "jsdom": "^16.5.0",
     "prettier": "^1.19.1"
   },
   "license": "MIT",
